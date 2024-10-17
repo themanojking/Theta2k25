@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaWhatsapp, FaInstagram, FaYoutube } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
@@ -19,10 +20,10 @@ function Footer() {
         {/* Overview Section */}
         <div className="text-center font-serif">
           <div className="text-2xl font-semibold md:mb-4 mt-4">Overview</div>
-          <p className="cursor-pointer text-xl">Home</p>
-          <p className="cursor-pointer text-xl">Event</p>
-          <p className="cursor-pointer text-xl">About</p>
-          <p className="cursor-pointer text-xl">Contact Us</p>
+          <p className="cursor-pointer text-xl"><Link to={'/'}>Home</Link></p>
+          <p className="cursor-pointer text-xl"><Link to={'/event'}>Event</Link></p>
+          <p className="cursor-pointer text-xl"><Link to={'/about'}>About</Link></p>
+          <p className="cursor-pointer text-xl"><Link to={'/contact'}>Contact Us</Link></p>
         </div>
 
         {/* Social Media Section */}
@@ -40,7 +41,7 @@ function Footer() {
       {/* Footer Note */}
       <div className="mt-8 md:mt-16 border-t-2 border-white text-center pt-4">
         <h1 className="text-sm md:text-lg lg:text-xl font-extrabold font-serif">
-          Designed and Developed by Delta Info
+          @Designed and Developed by Delta Info
         </h1>
       </div>
     </div>

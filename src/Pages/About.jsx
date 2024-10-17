@@ -1,6 +1,8 @@
 import React from 'react'
+import CountUp from 'react-countup';
 import Navbar from '../Components/Navbar'
-import Sastra from './Sastra';
+import Footer from '../Components/Footer';
+
 
 
 function About() {
@@ -45,7 +47,7 @@ function About() {
                 <h1 className='lg:text-4xl md:text-3xl text-2xl font-bold font-serif text-center'>Emulsion</h1>
                 <h3 className='lg:text-xl text-justify font-serif mt-3 lg:mt-5'>Emulsion honors the spirit of creativity and innovation across diverse media and artistic expressions. This event features competitions in photography, videography, advertisements, and short films,
                      where participants can exhibit their talents and imagination in a friendly and supportive environment.<br /></h3>
-                <h2 className='mt-5 text-2xl md:text-3xl font-bold'>"We Speak Cinema"</h2>
+                <h2 className='md:mt-5 mt-2 text-xl md:text-3xl  font-bold'>"We Speak Cinema"</h2>
                     
             </div>
         </div>
@@ -60,7 +62,7 @@ function About() {
                 <h3 className='lg:text-xl  text-justify font-serif mt-5'>The cluster seeks to create a space for individuals with similar interests to unite and explore the fields of robotics, programming, electronics, and mechanics. Members have the opportunity to collaborate on a range of projects,
                      from constructing basic robots to developing complex machines, utilizing various advanced tools and technologies. Additionally,
                       the cluster may engage in robotics competitions, hackathons, and other events to demonstrate their skills and display their innovations.</h3>
-                <h2 className='mt-5 md:text-3xl text-2xl font-bold'>"From Fiction to Reality"</h2>
+                <h2 className='md:mt-5 mt-2 md:text-3xl text-xl font-bold'>"From Fiction to Reality"</h2>
             </div>
             <div className='md:flex hidden'>
                 <img src='/Images/robotics.webp' alt='Robotics' className='lg:h-[35rem] lg:w-[35rem] rounded-3xl shadow-2xl shadow-pink-500'></img>
@@ -76,17 +78,80 @@ function About() {
                 <h1 className='lg:text-4xl md:text-3xl text-2xl font-bold font-serif text-center'>Informatica</h1>
                 <h3 className='lg:text-xl  font-serif mt-3 text-justify lg:mt-5'>Informatica is a student-led organization dedicated to uniting individuals who share a passion for computer science and technology. The club's mission is to offer its members avenues to enhance their technical skills, 
                     engage in coding competitions, connect with industry professionals, and stay informed about the latest trends in the field.</h3>
-                    <h2 className='mt-5 md:text-3xl text-2xl font-bold'>"Where Tech Enthusiasts Unite"</h2>
+                    <h2 className='md:mt-5 mt-2 md:text-3xl text-xl font-bold'>"Where Tech Enthusiasts Unite"</h2>
             </div>
         </div>
 
-        <Sastra />
-
-
-
-
-        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:px-20 px-10 py-10 gap-10 lg:gap-28 items-center">
+    {/* Mobile Image (only visible on small screens) */}
+    <div className="md:hidden">
+        <img
+            src="/Images/Sastra1.jpg"
+            alt="NightView"
+            className="w-full h-auto rounded-3xl shadow-2xl shadow-pink-500"
+        />
     </div>
+
+    {/* Text Section */}
+    <div className="lg:text-center">
+        <h1 className="lg:text-4xl md:text-3xl text-2xl font-bold font-serif text-center">
+            About Our Institution
+        </h1>
+        <h3 className="lg:text-xl text-justify font-serif mt-5">
+            The Shanmugha Arts, Science, Technology & Research Academy, also known as SASTRA, is a private and deemed university.
+            Sastra University is one of the leading Educational Institutions in India with a long-standing reputation for academic excellence.
+        </h3>
+
+        {/* Stats Section */}
+        <div className="flex flex-row justify-between items-center mt-10 md:mt-8 gap-5">
+            {/* Courses Box */}
+            <div className="flex flex-col items-center border-2 border-[#000000] p-6 lg:p-8 md:p-4 rounded-lg">
+                <p className="text-[#92553D] font-semibold text-2xl">
+                    <CountUp start={0} end={350} duration={40} />+
+                </p>
+                <p className="text-black font-bold text-lg leading-[1.3] md:leading-[1.5]">
+                    Courses
+                </p>
+            </div>
+
+            {/* Students Box */}
+            <div className="flex flex-col items-center border-2 border-[#000000] p-6 lg:p-8 md:p-4 rounded-lg">
+                <p className="text-[#92553D] font-semibold text-2xl">
+                    <CountUp start={0} end={3500} duration={40} />+
+                </p>
+                <p className="text-black font-semibold text-lg leading-[1.3] md:leading-[1.5]">
+                    Students
+                </p>
+            </div>
+
+            {/* Clusters Box */}
+            <div className="flex flex-col items-center border-2 border-[#000000] p-6 lg:p-8 md:p-4 rounded-lg">
+                <p className="text-[#92553D] font-semibold text-2xl">
+                    <CountUp start={0} end={11} duration={40} />+
+                </p>
+                <p className="text-black font-semibold text-lg leading-[1.3] md:leading-[1.5]">
+                    Clusters
+                </p>
+            </div>
+        </div>
+    </div>
+
+    {/* Desktop Image (only visible on medium and large screens) */}
+    <div className="hidden md:flex justify-center">
+        <img
+            src="/Images/Sastra1.jpg"
+            alt="NightView"
+            className="lg:h-[35rem] lg:w-[35rem] w-full h-auto rounded-3xl shadow-2xl shadow-pink-500"
+        />
+    </div>
+</div>
+
+<div className='mt-10'>
+<Footer/>
+</div>
+
+
+</div>
   )
 }
 

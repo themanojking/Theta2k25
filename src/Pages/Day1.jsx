@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Navbar from '../Components/Navbar';
 import FootNav from '../Components/FootNav';
 
@@ -83,16 +85,25 @@ const data = [
     bgColor: 'bg-gradient-to-r from-orange-400 to-orange-200',
     image: 'path/to/image10.jpg', // Replace with actual image path
   },
+
 ];
 
 function Day1() {
+  useEffect(() => {
+    AOS.init({ duration: 1750 }); // Initialize AOS with a 1-second duration
+  }, []);
+
   return (
     <div className='bg-gradient-to-b from-gray-100 to-white min-h-screen'>
         <Navbar />
         <FootNav />
       <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-20 mt-10 p-5'>
         {data.map((event, index) => (
-         <div key={index} className={`shadow-xl p-4 rounded-3xl mt-2 ${event.bgColor}`}>
+         <div 
+           key={index} 
+           className={`shadow-xl p-4 rounded-3xl mt-2 ${event.bgColor}`}
+           data-aos="fade-up" // Add AOS animation
+         >
             <div className='text-center p-5'>
               <img src={event.image} alt={event.head} className="w-32 h-32 object-cover rounded-full mx-auto" /> 
               <h1 className='text-2xl font-bold font-poppins mt-3'>{event.head}</h1>

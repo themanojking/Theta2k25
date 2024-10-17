@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Navbar from '../Components/Navbar';
 import FootNav from '../Components/FootNav';
 
@@ -214,24 +216,32 @@ const eventsData = [
 ];
 
 function Events() {
+  // Initialize AOS
+  useEffect(() => {
+    AOS.init({ duration: 1750 });
+  }, []);
+
   return (
     <div className='bg-gradient-to-r from-white to-gray-300 min-h-screen'>
-         <Navbar />
-         <FootNav />
+      <Navbar />
+      <FootNav />
       <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-20 mt-10 p-5'>
         {eventsData.map((event, index) => (
-         <div key={index} className={`shadow-xl p-4 rounded-3xl mt-2 ${event.bgColor}`}>
-
-            <div className='text-center p-5 text-black'> {/* Keep text color white for contrast */}
+          <div
+            key={index}
+            className={`shadow-xl p-4 rounded-3xl mt-2 ${event.bgColor}`}
+            data-aos="fade-up" // AOS animation
+          >
+            <div className='text-center p-5 text-black'>
               <img src={event.image} alt={event.head} className="w-32 h-32 object-cover rounded-full mx-auto" />
               <h1 className='text-2xl font-bold font-poppins mt-3'>{event.head}</h1>
               <h4 className='text-xl font-medium mt-1 font-roboto'>{event.time}</h4>
               <h2 className='text-xl font-semibold font-serif'>Venue: {event.venue}</h2>
               <h3 className='text-2xl font-semibold font-serif'>{event.dept}</h3>
               <div className='flex justify-center'>
-              <button className='px-6 py-2 rounded-xl mt-5 bg-gradient-to-r from-purple-500 to-purple-700 text-white font-semibold transition-transform duration-300 ease-in-out transform hover:scale-110 hover:rotate-3 hover:shadow-2xl'>
-                Register
-               </button>
+                <button className='px-6 py-2 rounded-xl mt-5 bg-gradient-to-r from-purple-500 to-purple-700 text-white font-semibold transition-transform duration-300 ease-in-out transform hover:scale-110 hover:rotate-3 hover:shadow-2xl'>
+                  Register
+                </button>
               </div>
             </div>
           </div>

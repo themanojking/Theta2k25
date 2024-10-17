@@ -8,6 +8,8 @@ import Event from './Pages/Event'
 import Day1 from './Pages/Day1'
 import Day2 from './Pages/Day2'
 import Day3 from './Pages/Day3'
+import Informatica from './Pages/Informatica';
+import Emulsion from './Pages/Emulsion';
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
             <Route path='/day1' element={<Day1 />}></Route>
             <Route path='/day2' element={<Day2 />}></Route>
             <Route path='/day3' element={<Day3 />}></Route>
+            <Route path='/informatica' element={<Informatica />}></Route>
+            <Route path='/emulsion' element={<Emulsion />}></Route>
          </Routes>
         </BrowserRouter>
     </div>

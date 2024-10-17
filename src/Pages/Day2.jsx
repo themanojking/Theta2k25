@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import FootNav from '../Components/FootNav';
 import Navbar from '../Components/Navbar';
 
@@ -94,13 +96,21 @@ const events = [
 ];
 
 function Day2() {
+  useEffect(() => {
+    AOS.init({ duration: 1750 });
+  }, []);
+
   return (
     <div className='bg-gradient-to-b from-gray-100 to-white min-h-screen'>
-         <Navbar />
-         <FootNav />
+      <Navbar />
+      <FootNav />
       <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-20 mt-10 p-5'>
         {events.map((event, index) => (
-          <div key={index} className={`shadow-xl border-1 border-black p-2 rounded-3xl mt-2 ${event.bgColor}`}>
+          <div 
+            key={index} 
+            className={`shadow-xl border-1 border-black p-2 rounded-3xl mt-2 ${event.bgColor}`} 
+            data-aos="fade-up" // Add AOS animation
+          >
             <div className='text-center p-5'>
               <img src={event.image} alt={event.title} className="w-32 h-32 object-cover rounded-full mx-auto" /> 
               <h1 className='text-2xl font-bold font-poppins mt-3'>{event.title}</h1>
@@ -108,9 +118,9 @@ function Day2() {
               <h2 className='text-xl font-semibold font-serif'>Venue: {event.venue}</h2>
               <h3 className='text-2xl font-semibold font-serif'>{event.department}</h3>
               <div className='flex justify-center'>
-              <button className='px-6 py-2 rounded-xl mt-5 bg-gradient-to-r from-purple-500 to-purple-700 text-white font-semibold transition-transform duration-300 ease-in-out transform hover:scale-110 hover:rotate-3 hover:shadow-2xl'>
-                 Register
-              </button>
+                <button className='px-6 py-2 rounded-xl mt-5 bg-gradient-to-r from-purple-500 to-purple-700 text-white font-semibold transition-transform duration-300 ease-in-out transform hover:scale-110 hover:rotate-3 hover:shadow-2xl'>
+                  Register
+                </button>
               </div>
             </div>
           </div>
