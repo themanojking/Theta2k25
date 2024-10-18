@@ -15,7 +15,7 @@ function Home() {
     { id: 2,
        title: "Emulsion ", 
        imgSrc: "/Images/emul.jpg",
-       content:"Film Making",
+       content:"It is a compilation of various talents of students in the form of short film making",
       path:'/emulsion' },
     { id: 3,
        title: "Robotics ",
@@ -68,7 +68,7 @@ function Home() {
           muted 
           className='lg:w-[70%] md:w-[90%] w-[95%] lg:ml-[15rem] md:ml-[3rem] ml-3 md:mt-5 rounded-3xl mt-20'>
         </video>
-        <div className='absolute inset-0 flex flex-col justify-center items-center lg:text-8xl text-5xl font-bold text-white'>
+        <div className='absolute inset-0 flex flex-col justify-center items-center lg:text-8xl md:text-5xl text-3xl font-bold text-white'>
           <h1>Coming Soon...</h1>
           <h2>THETA 2K25</h2>
         </div>
@@ -86,11 +86,11 @@ function Home() {
                   className="w-32 h-32 object-cover rounded-full absolute top-[-40px] left-1/2 transform -translate-x-1/2 border-4 border-white"
                 />
                 <h2 className="text-xl font-bold mt-16 mb-6 text-center">{box.title}</h2>
-                <h2 className="text-gray-600 mb-4 text-center">
+                <h2 className="text-gray-600 mb-4 py-3 font-serif font-black text-center">
                   {box.content}
                 </h2>
                 <div className='text-center'>
-                  <Link to={box.path} className='px-3 py-2 bg-blue-500 rounded-2xl text-white text-lg'>Learn More</Link>
+                  <Link to={box.path} className='px-3 py-2 mt-3 bg-purple-600 rounded-2xl text-white text-lg'>Learn More</Link>
                 </div>
               </div>
             ))}

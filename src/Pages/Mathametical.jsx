@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Navbar from '../Components/Navbar';
-
+import Footer from '../Components/Footer';
 
 const data = [
   {
@@ -49,6 +49,9 @@ function Mathametical() {
           </div>
         ))}
       </div>
+      <div className='mt-10'>
+<Footer/>
+</div>
     </div>
   );
 }

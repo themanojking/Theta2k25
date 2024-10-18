@@ -105,8 +105,8 @@ function About() {
         {/* Stats Section */}
         <div className="flex flex-row justify-between items-center mt-10 md:mt-8 gap-5">
             {/* Courses Box */}
-            <div className="flex flex-col items-center border-2  border-[#844DA3] p-6 lg:p-8 md:p-4 rounded-lg">
-                <p className="text-white font-semibold text-2xl">
+            <div className="flex flex-col items-center border-2  border-[#844DA3] p-3 lg:p-8 md:p-4 rounded-lg">
+                <p className="text-white font-semibold text-lg">
                     <CountUp start={0} end={350} duration={40} />+
                 </p>
                 <p className="text-white font-bold text-lg leading-[1.3] md:leading-[1.5]">
@@ -115,8 +115,8 @@ function About() {
             </div>
 
             {/* Students Box */}
-            <div className="flex flex-col items-center border-2  border-[#844DA3] p-6 lg:p-8 md:p-4 rounded-lg">
-                <p className="text-white font-semibold text-2xl">
+            <div className="flex flex-col items-center border-2  border-[#844DA3] p-3 lg:p-8 md:p-4 rounded-lg">
+                <p className="text-white font-semibold text-lg">
                     <CountUp start={0} end={3500} duration={40} />+
                 </p>
                 <p className="text-white font-semibold text-lg leading-[1.3] md:leading-[1.5]">
@@ -125,8 +125,8 @@ function About() {
             </div>
 
             {/* Clusters Box */}
-            <div className="flex flex-col items-center border-2  border-[#844DA3] p-6 lg:p-8 md:p-4 rounded-lg">
-                <p className="text-white font-semibold text-2xl">
+            <div className="flex flex-col items-center border-2  border-[#844DA3] p-3 lg:p-8 md:p-4 rounded-lg">
+                <p className="text-white font-semibold text-lg">
                     <CountUp start={0} end={11} duration={40} />+
                 </p>
                 <p className="text-white font-semibold text-lg leading-[1.3] md:leading-[1.5]">
