@@ -3,6 +3,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import FootNav from '../Components/FootNav';
 import Navbar from '../Components/Navbar';
+import Footer from '../Components/Footer';
 
 const events = [
   {
@@ -11,7 +12,8 @@ const events = [
     venue: 'LAB-1',
     department: 'Informatica',
     bgColor: 'bg-gradient-to-r from-blue-400 to-blue-200',
-    image: '/Students/informatica.jpg', 
+    image: '/Images/mission.avif',
+    shadowColor: 'shadow-[0px_10px_20px_5px_rgba(56,189,248,0.5)]', // Blue custom shadow
   },
   {
     title: 'Sharp Mind',
@@ -19,7 +21,8 @@ const events = [
     venue: '309',
     department: 'Strategia',
     bgColor: 'bg-gradient-to-r from-green-400 to-green-200',
-    image: '/Students/informatica.jpg', 
+    image: '/Images/sharp.jpg',
+    shadowColor: 'shadow-[0px_10px_20px_5px_rgba(74,222,128,0.5)]', // Green custom shadow
   },
   {
     title: 'Squid Game',
@@ -27,7 +30,8 @@ const events = [
     venue: '504',
     department: 'Optica',
     bgColor: 'bg-gradient-to-r from-red-400 to-red-200',
-    image: '/Students/informatica.jpg', 
+    image: '/Images/squidgame.avif',
+    shadowColor: 'shadow-[0px_10px_20px_5px_rgba(248,113,113,0.5)]', // Red custom shadow
   },
   {
     title: 'Robo-saga',
@@ -35,7 +39,8 @@ const events = [
     venue: 'BasketBall Court',
     department: 'Robotics',
     bgColor: 'bg-gradient-to-r from-yellow-400 to-yellow-200',
-    image: '/Students/informatica.jpg', 
+    image: '/Images/robosaga.avif',
+    shadowColor: 'shadow-[0px_10px_20px_5px_rgba(250,204,21,0.5)]', // Yellow custom shadow
   },
   {
     title: 'Bing Bang',
@@ -43,7 +48,8 @@ const events = [
     venue: '305',
     department: 'Access America',
     bgColor: 'bg-gradient-to-r from-purple-400 to-purple-200',
-    image: '/Students/informatica.jpg', 
+    image: '/Images/bingbang.avif',
+    shadowColor: 'shadow-[0px_10px_20px_5px_rgba(192,132,252,0.5)]', // Purple custom shadow
   },
   {
     title: 'Technical Pick and Talk',
@@ -51,7 +57,8 @@ const events = [
     venue: '406',
     department: 'Electronica',
     bgColor: 'bg-gradient-to-r from-pink-400 to-pink-200',
-    image: '/Students/informatica.jpg', 
+    image: '/Images/technical.avif',
+    shadowColor: 'shadow-[0px_10px_20px_5px_rgba(244,114,182,0.5)]', // Pink custom shadow
   },
   {
     title: 'Logic and Ladder',
@@ -59,7 +66,8 @@ const events = [
     venue: 'LAB-2',
     department: 'Informatica',
     bgColor: 'bg-gradient-to-r from-teal-400 to-teal-200',
-    image: '/Students/informatica.jpg', 
+    image: '/Images/logic.avif',
+    shadowColor: 'shadow-[0px_10px_20px_5px_rgba(45,212,191,0.5)]', // Teal custom shadow
   },
   {
     title: 'Fun Island',
@@ -67,7 +75,8 @@ const events = [
     venue: '509',
     department: 'Mathematica',
     bgColor: 'bg-gradient-to-r from-indigo-400 to-indigo-200',
-    image: '/Students/informatica.jpg', 
+    image: '/Images/funisland.avif',
+    shadowColor: 'shadow-[0px_10px_20px_5px_rgba(129,140,248,0.5)]', // Indigo custom shadow
   },
   {
     title: 'Model Exhibit',
@@ -75,7 +84,8 @@ const events = [
     venue: 'Drawing Hall',
     department: 'Biogenesis',
     bgColor: 'bg-gradient-to-r from-orange-400 to-orange-200',
-    image: '/Students/informatica.jpg', 
+    image: '/Images/model.avif',
+    shadowColor: 'shadow-[0px_10px_20px_5px_rgba(251,146,60,0.5)]', // Orange custom shadow
   },
   {
     title: 'Ithu Kalavara Bhoomi',
@@ -83,7 +93,8 @@ const events = [
     venue: 'T and P Hall',
     department: 'Equilibria',
     bgColor: 'bg-gradient-to-r from-gray-400 to-gray-200',
-    image: '/Students/informatica.jpg', 
+    image: '/Images/idhukalavara.avif',
+    shadowColor: 'shadow-[0px_10px_20px_5px_rgba(156,163,175,0.5)]', // Gray custom shadow
   },
   {
     title: 'Cognitive Cracking',
@@ -91,7 +102,8 @@ const events = [
     venue: '310',
     department: 'Optica',
     bgColor: 'bg-gradient-to-r from-sky-400 to-sky-200',
-    image: '/Students/informatica.jpg', 
+    image: '/Images/cracking.jpg',
+    shadowColor: 'shadow-[0px_10px_20px_5px_rgba(56,189,248,0.5)]', // Sky-blue custom shadow
   },
 ];
 
@@ -101,15 +113,15 @@ function Day2() {
   }, []);
 
   return (
-    <div className='bg-gradient-to-b from-gray-100 to-white min-h-screen'>
+    <div className='bg-[#150F24] min-h-screen'>
       <Navbar />
       <FootNav />
       <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-20 mt-10 p-5'>
         {events.map((event, index) => (
           <div 
             key={index} 
-            className={`shadow-xl border-1 border-black p-2 rounded-3xl mt-2 ${event.bgColor}`} 
-            data-aos="fade-up" // Add AOS animation
+            className={`p-2 rounded-3xl mt-2 border-1 border-black ${event.bgColor} ${event.shadowColor}`} 
+            data-aos="fade-up"
           >
             <div className='text-center p-5'>
               <img src={event.image} alt={event.title} className="w-32 h-32 object-cover rounded-full mx-auto" /> 
@@ -125,6 +137,9 @@ function Day2() {
             </div>
           </div>
         ))}
+      </div>
+      <div className='mt-10'>
+        <Footer />
       </div>
     </div>
   );

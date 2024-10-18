@@ -3,47 +3,53 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Navbar from '../Components/Navbar';
 import FootNav from '../Components/FootNav';
+import Footer from '../Components/Footer';
 
 const data = [
+  {
+    head: 'Idea-Verse',
+    time: '9:00 A.M - 12:00 P.M',
+    venue: 'LAB-1',
+    dept: 'Informatica',
+    image: '/Images/ideaverse.avif', 
+    bgColor: 'bg-gradient-to-r from-teal-400 to-teal-100',
+    shadowColor: 'shadow-[0px_10px_20px_5px_rgba(56,189,248,0.5)]', // Custom stronger teal shadow
+  },
   {
     head: 'Roadies',
     time: '10:00 A.M - 1:00 P.M',
     venue: '501',
     dept: 'Strategia',
-    image: 'path/to/roadies.jpg', 
+    image: '/Images/roadies.avif', 
     bgColor: 'bg-gradient-to-r from-blue-400 to-blue-200',
+    shadowColor: 'shadow-[0px_10px_20px_5px_rgba(96,165,250,0.5)]', // Custom stronger blue shadow
   },
   {
     head: 'Escape Room',
     time: '10:00 A.M - 1:00 P.M',
     venue: '406',
     dept: 'Electronica',
-    image: 'path/to/escape-room.jpg', 
+    image: '/Images/escaperoom.avif', 
     bgColor: 'bg-gradient-to-r from-purple-400 to-purple-200',
+    shadowColor: 'shadow-[0px_10px_20px_5px_rgba(167,139,250,0.5)]', // Custom stronger purple shadow
   },
   {
     head: 'Math Pi-Rates',
     time: '10:00 A.M - 4:00 P.M',
     venue: '502',
     dept: 'Mathematica',
-    image: 'path/to/math-pi-rates.jpg', 
+    image: '/Images/pirates.avif', 
     bgColor: 'bg-gradient-to-r from-green-400 to-green-200',
+    shadowColor: 'shadow-[0px_10px_20px_5px_rgba(74,222,128,0.5)]', // Custom stronger green shadow
   },
   {
     head: 'Fun Max',
     time: '1:00 P.M - 3:00 P.M',
     venue: '416',
     dept: 'Biogenesis',
-    image: 'path/to/fun-max.jpg', 
+    image: '/Images/funmax.avif', 
     bgColor: 'bg-gradient-to-r from-pink-400 to-pink-200',
-  },
-  {
-    head: 'Fun Max',
-    time: '1:00 P.M - 3:00 P.M',
-    venue: '416',
-    dept: 'Biogenesis',
-    image: 'path/to/fun-max.jpg', 
-    bgColor: 'bg-gradient-to-r from-teal-400 to-teal-100',
+    shadowColor: 'shadow-[0px_10px_20px_5px_rgba(244,114,182,0.5)]', // Custom stronger pink shadow
   },
 ];
 
@@ -53,12 +59,16 @@ function Day3() {
   }, []);
 
   return (
-    <div className='bg-gradient-to-b from-gray-100 to-white min-h-screen'>
+    <div className='bg-[#150F24] min-h-screen'>
       <Navbar />
       <FootNav />
       <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-20 mt-10 p-5'>
         {data.map((event, index) => (
-          <div key={index} className={`shadow-xl p-4 rounded-3xl mt-2 ${event.bgColor}`} data-aos="fade-up">
+          <div 
+            key={index} 
+            className={`p-4 rounded-3xl mt-2 ${event.bgColor} ${event.shadowColor}`} 
+            data-aos="fade-up"
+          >
             <div className='text-center p-5'>
               <img src={event.image} alt={event.head} className="w-32 h-32 object-cover rounded-full mx-auto" />
               <h1 className='text-2xl font-bold font-poppins mt-3'>{event.head}</h1>
@@ -73,6 +83,9 @@ function Day3() {
             </div>
           </div>
         ))}
+      </div>
+      <div className='mt-10'>
+        <Footer />
       </div>
     </div>
   );

@@ -10,7 +10,7 @@ function FootNav() {
             <NavLink
               to="/event"
               className={({ isActive }) =>
-                isActive ? 'bg-blue-500 text-white px-3 py-2 rounded-xl' : 'text-black'
+                isActive ? 'bg-[#844DA3] text-white px-3 py-2 rounded-xl' : 'text-white'
               }
             >
               ALL
@@ -20,7 +20,7 @@ function FootNav() {
             <NavLink
               to="/day1"
               className={({ isActive }) =>
-                isActive ? 'bg-blue-500 text-white px-3 py-2 rounded-xl' : 'text-black'
+                isActive ? 'bg-[#844DA3] text-white px-3 py-2 rounded-xl' : 'text-white'
               }
             >
               DAY 1
@@ -30,7 +30,7 @@ function FootNav() {
             <NavLink
               to="/day2"
               className={({ isActive }) =>
-                isActive ? 'bg-blue-500 text-white px-3 py-2 rounded-xl' : 'text-black'
+                isActive ? 'bg-[#844DA3] text-white px-3 py-2 rounded-xl' : 'text-white'
               }
             >
               DAY 2
@@ -40,7 +40,7 @@ function FootNav() {
             <NavLink
               to="/day3"
               className={({ isActive }) =>
-                isActive ? 'bg-blue-500 text-white px-3 py-2 rounded-xl' : 'text-black'
+                isActive ? 'bg-[#844DA3] text-white px-3 py-2 rounded-xl' : 'text-white'
               }
             >
               DAY 3
