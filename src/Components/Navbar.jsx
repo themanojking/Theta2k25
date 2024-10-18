@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import 'boxicons/css/boxicons.min.css'; // Ensure boxicons is installed
-import { NavLink } from 'react-router-dom'; // Replace Link with NavLink
+import { Link, NavLink } from 'react-router-dom'; // Replace Link with NavLink
+import Home from '../Pages/Home';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,8 +14,8 @@ const Navbar = () => {
     return (
         <div className=" text-white   z-20">
             <header className="bg-[#181725] flex items-center justify-between p-4 md:px-8 rounded-b-2xl">
-                <div className="text-[24px] md:text-[32px] font-bold text-green-900">
-                    <h1 className='text-[#844DA3]'>THETA 2K25</h1>
+                <div className="text-[24px] md:text-[32px] font-bold text-[#844DA3]">
+                  <Link to={'/'}>THETA 2K25</Link>
                 </div>
 
                 {/* Navbar Links */}

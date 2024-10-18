@@ -64,7 +64,6 @@ function Home() {
         <video 
           src={videoBg} 
           autoPlay
-          muted 
           loop
           className='lg:w-[70%] md:w-[90%] w-[95%] lg:ml-[15rem] md:ml-[3rem] ml-3  md:mt-10 z-10 rounded-3xl mt-20'>
         </video>
