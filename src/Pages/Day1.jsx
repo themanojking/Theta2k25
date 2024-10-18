@@ -8,8 +8,8 @@ import Footer from '../Components/Footer';
 const data = [
   {
     head: "Hey Guys Let's Go",
-    time: '9:00 A.M - 12:00 P.M',
-    venue: '303',
+    time: '10:00 A.M - 1:00 P.M',
+    venue: '101',
     dept: 'Strategia',
     bgColor: 'bg-gradient-to-r from-blue-400 to-blue-200',
     image: '/Images/letsgo.jpg',

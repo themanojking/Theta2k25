@@ -5,8 +5,8 @@ function FootNav() {
   return (
     <div className=''>
       <nav className='flex justify-center mt-5'>
-        <ul className='flex gap-5 font-bold text-xl'>
-          <li className='px-3 py-2 rounded-xl'>
+        <ul className='flex  font-bold text-xl'>
+          <li className='px-2 py-2 rounded-xl'>
             <NavLink
               to="/event"
               className={({ isActive }) =>

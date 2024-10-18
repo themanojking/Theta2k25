@@ -63,10 +63,10 @@ function Home() {
       <div className="relative">
         <video 
           src={videoBg} 
-          autoPlay 
-          loop 
+          autoPlay
           muted 
-          className='lg:w-[70%] md:w-[90%] w-[95%] lg:ml-[15rem] md:ml-[3rem] ml-3 md:mt-5 rounded-3xl mt-20'>
+          loop
+          className='lg:w-[70%] md:w-[90%] w-[95%] lg:ml-[15rem] md:ml-[3rem] ml-3  md:mt-10 z-10 rounded-3xl mt-20'>
         </video>
         <div className='absolute inset-0 flex flex-col justify-center items-center lg:text-8xl md:text-5xl text-3xl font-bold text-white'>
           <h1>Coming Soon...</h1>

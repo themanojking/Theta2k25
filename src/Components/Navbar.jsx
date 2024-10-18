@@ -11,7 +11,7 @@ const Navbar = () => {
     // fixed top-0 left-0 w-full z-50
 
     return (
-        <div className=" text-white   ">
+        <div className=" text-white   z-20">
             <header className="bg-[#181725] flex items-center justify-between p-4 md:px-8 rounded-b-2xl">
                 <div className="text-[24px] md:text-[32px] font-bold text-green-900">
                     <h1 className='text-[#844DA3]'>THETA 2K25</h1>
